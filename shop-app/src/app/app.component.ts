@@ -1,6 +1,8 @@
 import { User } from './auth/models/user';
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
+import { AuthService } from './auth/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,12 +10,5 @@ import { Observable } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'shop-app';
-
-  user$: Observable<User>;
-  authenticated$: Observable<boolean>;
-
-  logout() {
-    
-  }
+  
 }

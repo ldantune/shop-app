@@ -1,0 +1,65 @@
+<h1 mat-dialog-title>{{title}}</h1>
+<form [formGroup]="formRegister" (ngSubmit)="onSubmit()">
+    <div mat-dialog-content fxLayout="column" fxLayoutAlign="space-around stretch">
+
+        <!-- <div fxLayout="row" fxLayoutAlign="space-between stretch">
+            <mat-checkbox formControlName="ativo">Ativar</mat-checkbox>
+        </div> -->
+        <!--Linha 1-->
+        <div fxLayout="row" fxLayoutAlign="space-between stretch">
+            <mat-form-field fxFlex="20">
+                <input matInput type="number" formControlName="cpf" autocomplete="sobrenome" placeholder="CPF">
+            </mat-form-field>
+            <mat-form-field fxFlex="39">
+                <input matInput type="text" formControlName="nome" autocomplete="nome" placeholder="Nome">
+            </mat-form-field>
+            <mat-form-field fxFlex="39">
+                <input matInput type="text" formControlName="sobrenome" autocomplete="sobrenome" placeholder="Sobre Nome">
+            </mat-form-field>
+        </div>
+
+        <!--Linha 2-->
+        <div fxLayout="row" fxLayoutAlign="space-between stretch">
+            <mat-form-field fxFlex="40">
+                <input matInput type="text" formControlName="endereco" autocomplete="endereco" placeholder="Endereço">
+            </mat-form-field>
+
+            <mat-form-field fxFlex="14">
+                <input matInput type="text" formControlName="cidade" autocomplete="cidade" placeholder="Cidade">
+            </mat-form-field>
+
+            <mat-form-field fxFlex="15">
+                <mat-select matNativeControl placeholder="Estado" formControlName="estado">
+                    <mat-option *ngFor="let estado of estados" [value]="estado">
+                        {{estado}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <!--Linha 3-->
+        <div fxLayout="row" fxLayoutAlign="space-between stretch">
+            <mat-form-field fxFlex="25">
+                <input matInput type="tel" formControlName="telefone" autocomplete="telefone" placeholder="Telefone">
+            </mat-form-field>
+            <mat-form-field fxFlex="25">
+                <input matInput type="tel" formControlName="celular" autocomplete="celular" placeholder="Celular">
+            </mat-form-field>
+            <mat-form-field fxFlex="49">
+                <input matInput type="email" formControlName="email" class="form-control" autocomplete="email" placeholder="E-mail">
+            </mat-form-field>
+        </div>
+
+
+    </div>
+    <div mat-dialog-actions>
+        <div fxLayout="row" fxLayoutAlign="end end">
+            <button mat-button color="primary" type="submit" [disabled]="!formRegister.valid">
+                <mat-icon>done</mat-icon>&nbsp;Salvar
+            </button>
+        </div>
+    </div>
+</form>
+<div fxLayout="row" fxLayoutAlign="end end">
+    <button mat-button color="warn" (click)="cancelar()">Cancel</button>
+</div>

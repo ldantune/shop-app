@@ -1,9 +1,9 @@
 <div  fxLayout="row" fxLayoutAlign="space-around center" >
-    <div align="center" fxLayout="row" fxLayoutAlign="center center"  class="register-form">
+    <div align="center" fxLayout="row" fxLayoutAlign="center center"  >
   
       <form role="form" [formGroup]="formRegister" (ngSubmit)="onSubmit()">
   
-      <mat-card class="mat-elevation-z8" flex="80">
+      <mat-card class="register-form mat-elevation-z8" flex="80">
   
         <mat-card-title>Sign up</mat-card-title>
   
@@ -12,27 +12,27 @@
           <div fxLayout="row" fxLayoutAlign="space-between stretch">
             <mat-form-field fxFlex="45">
               <input matInput type="text" formControlName="firstname" 
-                autocomplete="firstname" placeholder="First Name">
+                autocomplete="firstname" placeholder="Nome">
             </mat-form-field>               
             <mat-form-field fxFlex="45">
               <input matInput type="text" formControlName="lastname" 
-                autocomplete="lastname" placeholder="Last Name" >
+                autocomplete="lastname" placeholder="Sobre Nome" >
             </mat-form-field>               
           </div>
   
           <mat-form-field>
             <input matInput type="text" formControlName="address" 
-                  autocomplete="address" placeholder="Address" >
+                  autocomplete="address" placeholder="Endereço Completo" >
           </mat-form-field>
   
           <div fxLayout="row" fxLayoutAlign="space-between stretch">
             <mat-form-field fxFlex="75"> 
               <input matInput type="text" formControlName="city" 
-                autocomplete="citt" placeholder="City"  >
+                autocomplete="citt" placeholder="Cidade">
             </mat-form-field>
           
             <mat-form-field  fxFlex="15">
-              <mat-select matNativeControl placeholder="State" formControlName="state">
+              <mat-select matNativeControl placeholder="Estado" formControlName="state">
                 <mat-option *ngFor="let state of states" [value]="state">
                   {{state}}
                 </mat-option>

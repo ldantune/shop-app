@@ -11,11 +11,16 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { NotFoundComponent } from './not-found/not-found.component'
 import { AuthModule } from './auth/auth.module';
+import { MainModule } from './main/main.module';
+import { FooterComponent } from './components/footer/footer.component';
+import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    FooterComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +29,7 @@ import { AuthModule } from './auth/auth.module';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule,
+    // MainModule,
     AuthModule,
     AppRoutingModule,
   ],
