@@ -1,14 +1,8 @@
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { PessoaService } from './../../../services/pessoa.service';
-import { PessoaModel } from './../../../models/pessoa.model';
-import { Observable, Subject } from 'rxjs';
-import { Component, OnInit, ViewChild, ElementRef, Inject } from '@angular/core';
-import { MatTableDataSource } from '@angular/material/table';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { takeUntil } from 'rxjs/operators';
-import Swal from 'sweetalert2';
+import { PessoaModel } from '../../../models/pessoa-model';
+import { Component, OnInit,  Inject } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({

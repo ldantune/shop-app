@@ -1,4 +1,4 @@
-import { PessoaModel } from './../models/pessoa.model';
+import { PessoaModel } from '../models/pessoa-model';
 import { Injectable } from '@angular/core';
 import { AngularFirestoreCollection, AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';

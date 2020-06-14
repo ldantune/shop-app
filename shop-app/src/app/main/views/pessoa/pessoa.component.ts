@@ -1,7 +1,5 @@
-// import { PessoaModel } from './../../models/pessoa.model';
-// import { Swal } from 'sweetalert2';
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
-import { PessoaModel } from '../../models/pessoa.model';
+import { PessoaModel } from '../../models/pessoa-model';
 import { takeUntil } from 'rxjs/operators';
 import { MatTableDataSource } from '@angular/material/table';
 import { PessoaService } from '../../services/pessoa.service';

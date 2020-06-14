@@ -1,0 +1,17 @@
+mat-card {
+    margin: 20px;
+}
+
+.editable {
+    margin: 20px;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+.imageUrl {
+    width: 200px;
+    height: 150px;
+}
