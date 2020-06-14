@@ -1,0 +1,20 @@
+.notfound {
+    margin: 2px;
+    
+}
+
+.example-card {
+    width: 1200px;
+}
+  
+
+.buttonHome {
+    /* text-align: center; */
+    position: absolute; 
+   top: 450px; 
+   left: 0; 
+   width: 100%;
+   font-size: 28px;
+   color: white;
+   
+}
